@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <button>Кликне меня!</button>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <br>
+    <button id="openDialog">Вход на сайт</button> 
+  <dialog>
+   <form id="authentication" action="handler.php">
+    <p><input name="login" required autofocus placeholder="Логин"></p>
+    <p><input type="password" name="pass" required placeholder="Пароль"></p>
+    <p><button type="submit">Войти</button> 
+    <button id="closeDialog">Закрыть окно</button></p>
+   </form> 
+  </dialog>
+
+  
+  <script>
+   var dialog = document.querySelector('dialog');
+   document.querySelector('#openDialog').onclick = function() {
+    dialog.showModal();
+   }
+   document.querySelector('#closeDialog').onclick = function() {
+    dialog.close();
+   }
+  </script>
+</body>
+</html>

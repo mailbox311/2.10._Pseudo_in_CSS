@@ -1,0 +1,44 @@
+*
+    box-sizing: border-box
+button // кнопка
+    width: 250px // ширина кнопки
+    height: 50px // высота кнопки
+    background-color: #ffe66b  // цвет фона кнопки желтый
+    border: none // линий(границ) нет
+    cursor: pointer // курсор : указатель
+    transition: 0.5s all // за какое время будет происходить изменения
+    outline: none // обводки небудет 
+    &:hover  // псевдокласс, при навидении курсора мыши
+        background-color: pink // цвет фона кнопки розовый
+        color: #fff // текст белый
+    &:active // псевдокласс, при нажатии и удержании 
+        background-color: orange
+    &:focus // псевдокласс, при нажатии 
+        background-color: grey // цвет фона кнопки серый
+
+        
+        
+.circle // кружки
+    width: 50px // ширина кнопки
+    height: 50px // высота кнопки
+    background-color: green // цвет фона кнопки зеленый
+    border-radius: 100% // скругление
+    margin-top: 10px // отступ сверху
+    transition: 0.5s all // за какое время будет происходить изменения
+    &:nth-child(2n) //каждый второй, все четные элементы
+        background-color: red // цвет фона кнопки красный
+    &::before
+        content: '' // content должен быть всегда иначе псевдоэлемент не появиться на странице
+        display: block // строку преобразовали в блок
+        height: 2px // высота элемента
+        width: 0% // изначально его несуществует
+        background-color: #000 // цвет фона элемента
+        transition: 0.5s all // за какое время будет происходить изменения
+    &:hover // псевдокласс, при навидении курсора мыши
+        &::before // псевдоэлемент, перед элементом
+            width: 100%
+
+button
+    #openDialog
+    width: 200px
+    dialog: rgba(0, 0, 0, .7)
